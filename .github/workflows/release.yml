@@ -1,12 +1,15 @@
-name: Release
+name: 🎉 Release
 
 on:
   push:
     tags:
       - '*'
 
+permissions:
+  contents: write
+
 jobs:
-  release:
+  goreleaser:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
